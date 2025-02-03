@@ -1,0 +1,15 @@
+{{define "qa"}}
+<li>
+    <div class="question">{{.Question}}</div>
+    <div class="answer">{{.Answer}}</div>
+</li>
+{{end}}
+
+{{define "page"}}
+<h1>This is the Dynamic FAQ Page</h1>
+<ul>
+    {{range .}}
+    {{template "qa" .}}
+    {{end}}
+</ul>
+{{end}}
